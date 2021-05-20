@@ -1,4 +1,4 @@
-## MY JOURNEY TO 1337
+## PLAY CTF and CHANGE LIFE
 
 You can use the [editor on GitHub](https://github.com/norelation98/ICOZDS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
