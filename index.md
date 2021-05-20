@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## MY JOURNEY TO 1337
 
 You can use the [editor on GitHub](https://github.com/norelation98/ICOZDS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
