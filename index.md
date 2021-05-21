@@ -4,7 +4,53 @@
 
 ## JOHN THE RIPPER
 
-``` john --format=[format] --wordlist=[path to wordlist] [path to file]
+_john --format=[format] --wordlist=[path to wordlist] [path to file]_
+ 
+ **NTHash / NTLM** 
+
+You can acquire NTHash/NTLM hashes by dumping the SAM database on a Windows machine, by using a tool like Mimikatz or from the Active Directory database: NTDS.dit. You may not have to crack the hash to continue privilege escalation- as you can often conduct a "pass the hash" attack instead, but sometimes hash cracking is a viable option if there is a weak password policy.
+
+**Cracking Hashes from /etc/shadow** 
+
+_unshadow [path to passwd] [path to shadow]_
+
+**SINGLE CRACK MODE**
+
+Single Crack mode. In this mode, John uses only the information provided in the username, to try and work out possible passwords heuristically, by slightly changing the letters and numbers contained within the username.
+
+_john --single --format=[format] [path to file]_
+
+**A Note on File Formats in Single Crack Mode:**
+
+If you're cracking hashes in single crack mode, you need to change the file format that you're feeding john for it to understand what data to create a wordlist from. You do this by prepending the hash with the username that the hash belongs to, so according to the above example- we would change the file hashes.txt
+
+**What are Custom Rules?**
+
+Custom rules are defined in the john.conf file, usually located in /etc/john/john.conf [Wordlist rules syntax.]  (https://www.openwall.com/john/doc/RULES.shtml)
+
+_john --wordlist=[path to wordlist] --rule=PoloPassword [path to file]_
+
+**Zip2John**
+
+use John to crack the password on password protected Zip files.
+
+_zip2john [options] [zip file] > [output file]_
+
+_john --wordlist=/usr/share/wordlists/rockyou.txt zip_hash.txt_
+
+**Rar2John**
+
+obtain the password for rar archives.
+
+_rar2john [rar file] > [output file]_
+
+_john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt_
+
+**SSH2John**
+
+_ssh2john [id_rsa private key file] > [output file]_
+_john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa_hash.txt_
+
 
 
 
@@ -12,44 +58,4 @@
  
  
 
-```markdown
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/norelation98/ICOZDS/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
