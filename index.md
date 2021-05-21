@@ -1,7 +1,5 @@
 # PLAY CTF and CHANGE YOUR LIFE
 
-# HASHES
-
 ## JOHN THE RIPPER
 
 _john --format=[format] --wordlist=[path to wordlist] [path to file]_
