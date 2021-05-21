@@ -1,14 +1,32 @@
-## PLAY CTF and CHANGE LIFE
+# PLAY CTF and CHANGE YOUR LIFE
 
-You can use the [editor on GitHub](https://github.com/norelation98/ICOZDS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# HASHES
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## JOHN THE RIPPER
 
-### Markdown
+``` john --format=[format] --wordlist=[path to wordlist] [path to file]
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+
+
+ 
+ 
 
 ```markdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Syntax highlighted code block
 
 # Header 1
